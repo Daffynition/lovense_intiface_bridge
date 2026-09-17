@@ -1,0 +1,29 @@
+[package]
+name = "lovense_intiface_bridge"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.102"
+buttplug = "10.0.0"
+buttplug_client = "10.0.1"
+buttplug_core = "10.0.1"
+buttplug_transport_websocket_tungstenite = "10.0.1"
+futures = "0.3.32"
+futures-util = "0.3.32"
+tokio = { version = "1.50.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_urlencoded = "0.7"
+axum = "0.8"
+axum-server = { version = "0.7", default-features = false, features = ["tls-rustls-no-provider"] }
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"] }
+tower = { version = "0.5", features = ["util"] }
+tower-http = { version = "0.6", features = ["cors"] }
+http-body-util = "0.1"
+rcgen = "0.13"
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"
+tokio-rustls = "0.26"
