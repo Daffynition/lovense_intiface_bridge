@@ -2,6 +2,10 @@
 name = "lovense_intiface_bridge"
 version = "0.1.0"
 edition = "2024"
+license = "Apache-2.0"
+authors = ["ScvWebFire"]
+description = "A high-performance, lightweight bridge written in Rust that translates Lovense Standard & LAN HTTP/HTTPS API commands to Buttplug.io / Intiface Central protocol."
+repository = "https://github.com/Daffynition/lovense_intiface_bridge"
 
 [dependencies]
 anyhow = "1.0.102"
