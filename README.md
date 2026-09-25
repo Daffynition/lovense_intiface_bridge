@@ -91,7 +91,7 @@ Inspired by that proof of concept, this project was written in Rust to provide a
 
 #### Windows Binary
 
-1. Download the latest `0.1.1` release for Windows (`lovense_intiface_bridge_win_x86_64.zipe`).
+1. Download the latest `0.1.1` release for Windows (`lovense_intiface_bridge_0.1.1_win_x86_64.zip`).
 2. Unzip the binary (`lovense_intiface_bridge.exe`).
 3. Run the executable:
    ```cmd
@@ -101,7 +101,7 @@ Inspired by that proof of concept, this project was written in Rust to provide a
 
 #### Linux Binary
 
-1. Download the latest `0.1.1` release for Linux (`lovense_intiface_bridge_linux_gnu_x86_64.zipe`).
+1. Download the latest `0.1.1` release for Linux (`lovense_intiface_bridge_0.1.1_linux_gnu_x86_64.tar.gz`).
 2. Unzip the binary (`lovense_intiface_bridge`).
 3. Run the executable:
    ```cmd
