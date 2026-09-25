@@ -9,10 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Lovense WebSocket protocol support for bidirectional and streaming toy control.
-- Pre-compiled release binaries and packaging for Linux distributions.
+- Interaction in cli to control connections and toy control (e.g. stop all toys)
+- Adding GUI next to CLI to add more usability to the application
+- In app config and settings to control connections next to environment variables 
 
 ---
 
+## [0.1.1] - 2026-09-21
+
+### Added
+
+- **Linux Binaries:** Official pre-built release binaries for **Linux** platforms alongside Windows.
+- **Text fixes** Small textual changes in documentation and build configuration. Clarification and expanding with new information for future updates.**
 ## [0.1.0] - 2026-09-17
 
 ### Added

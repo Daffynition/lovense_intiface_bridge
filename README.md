@@ -16,13 +16,16 @@ Inspired by that proof of concept, this project was written in Rust to provide a
 
 ## Release Status & Roadmap
 
-### Version 0.1.0 (Current Release)
+### Version 0.1.1 (Current Release)
+- **Linux Binaries:** Official pre-built release binaries for **Linux** platforms alongside Windows.
+
+### Version 0.1.0 (Previous Release)
 - **Initial Public Release:** Provides full Lovense HTTP and HTTPS local LAN API emulation.
 - **Platform Availability:** Pre-compiled release binaries are currently provided for **Windows only** (`.exe`). Linux and other platforms can readily build from source using `cargo build --release`.
 
 ### Upcoming Release (Roadmap)
 - **Lovense WebSocket Protocol:** Full support for the Lovense WebSocket communication interface.
-- **Linux Binaries:** Official pre-built release binaries for **Linux** platforms alongside Windows.
+- **MacOS Binaries:** Official pre-built release binaries for **MacOS** platforms alongside Windows and Linux.
 - **Improvements:** Enhancements and optimizations to the codebase and user experience.
 - **Bug Fixes:** Addressing known issues and improving stability after testing by users.
 
@@ -50,7 +53,7 @@ Inspired by that proof of concept, this project was written in Rust to provide a
 
 ```
 +------------------------------------+
-|  Game / Application (e.g. Ren'Py)  |
+|          Game / Application        |
 +------------------------------------+
                   |
          Lovense HTTP / HTTPS
@@ -64,7 +67,7 @@ Inspired by that proof of concept, this project was written in Rust to provide a
            (ws://127.0.0.1:12345)
                   v
 +------------------------------------+
-|   Intiface Central / Engine        |
+|     Intiface Central / Engine      |
 +------------------------------------+
                   |
               Bluetooth
@@ -84,14 +87,27 @@ Inspired by that proof of concept, this project was written in Rust to provide a
 2. Start the Intiface server (default WebSocket address: `ws://127.0.0.1:12345`).
 3. Connect your devices in Intiface Central.
 
-### Running the Bridge (Windows Binary)
+### Running the Bridge
 
-1. Download the latest `0.1.0` release binary for Windows (`lovense_intiface_bridge.exe`).
-2. Run the executable:
+#### Windows Binary
+
+1. Download the latest `0.1.1` release for Windows (`lovense_intiface_bridge_win_x86_64.zipe`).
+2. Unzip the binary (`lovense_intiface_bridge.exe`).
+3. Run the executable:
    ```cmd
    lovense_intiface_bridge.exe
    ```
-3. The bridge will connect to Intiface Central and begin listening for Lovense HTTP/HTTPS requests on `http://127.0.0.1:20010` and `https://127.0.0.1:30010`.
+4. The bridge will connect to Intiface Central and begin listening for Lovense HTTP/HTTPS requests on `http://127.0.0.1:20010` and `https://127.0.0.1:30010`.
+
+#### Linux Binary
+
+1. Download the latest `0.1.1` release for Linux (`lovense_intiface_bridge_linux_gnu_x86_64.zipe`).
+2. Unzip the binary (`lovense_intiface_bridge`).
+3. Run the executable:
+   ```cmd
+   ./lovense_intiface_bridge
+   ```
+4. The bridge will connect to Intiface Central and begin listening for Lovense HTTP/HTTPS requests on `http://127.0.0.1:20010` and `https://127.0.0.1:30010`.
 
 ---
 
@@ -106,11 +122,16 @@ The bridge can be configured via environment variables:
 | `LOVENSE_HTTPS_PORT` | Local port for Lovense HTTPS server                          | `30010`                 |
 | `LOVENSE_DEBUG`      | Enable verbose HTTP request/response logging (`1` or `true`) | `false`                 |
 
-### Example (PowerShell / CMD):
+### Example Windows (PowerShell / CMD):
 ```powershell
 $env:LOVENSE_HTTP_PORT="20010"
 $env:INTIFACE_WS_URL="ws://127.0.0.1:12345"
 .\lovense_intiface_bridge.exe
+```
+
+### Example Linux (Bash / Fish):
+```shell
+LOVENSE_HTTP_PORT="200110" INTIFACE_WS_URL="ws://127.0.0.1:12345" ./lovense_intiface_bridge
 ```
 
 ---
@@ -122,7 +143,7 @@ To compile the binary yourself:
 1. Install the Rust toolchain from [rustup.rs](https://rustup.rs/).
 2. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/lovense_intiface_bridge.git
+   git clone https://github.com/Daffynition/lovense_intiface_bridge.git
    cd lovense_intiface_bridge
    ```
 3. Build the release binary:
